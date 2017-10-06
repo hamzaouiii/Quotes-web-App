@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+h1,h2,h3,h4,h5,h6,label
+{
+  font-family: 'segoe UI';
+  font-weight: lighter;
+}
+body 
+{
+  font-family: Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+label{cursor: pointer; transition: 0.5s;}
+h3,label
+{
+  font-size: 32px;
+}
+body div >img
+{
+  width: 80px;
+  height: 80px;
+  margin: 50px auto 0px auto;
+}
+body div > h1
+{
+text-align: center;
+font-size: 65px;
+}
+form
+{
+  margin: 50px auto 50px auto;
+  font-size: 20px;
+ text-align: center;
+}
+input[type='search']
+{
+  border: 0px solid;
+  border-bottom-width: 3px; 
+  border-color: #4169E1;
+  width: 320px;
+  height: 0px;
+  font-weight: lighter;
+  font-family: 'segoe UI';
+  font-size: 30px;
+  
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+input[type='search']:focus
+{
+  width: 90%;
+  border: 3px solid #4169E1;
+  overflow: hidden;
+  height: 80px;
+  padding: 10px 40px;
+}
+
+.grid 
+{  
+  position: relative;
+  margin: 20px auto;
+  width:90%; max-width: 100%;}
+.grid-item,.grid-sizer { width: 23.5%;}
+.gutter-sizer {  width: 1%;}
+.grid-item {
+  float: left;
+  cursor: pointer;
+  border-radius: 2px; 
+  border: 0.5px solid lightgrey;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.45);
+  text-align: center;
+  padding: 20px;
+  margin: 0 2px 15px;
+}
+.writer { display: inline-block; float: right; }
+.writer h4{ font-size: 20px;}
+p {
+  font-size: 25px; 
+  font-family: 'Lora', serif;
+  font-weight: lighter;
+}
+.quote-text{  padding: 10px 20px 10px 10px;  text-align: left}
+
+.none { display: none; }
+.tomato { color: tomato; }
+ h4 { font-size: 20px; }
+.random h3{  margin: 20px; font-weight: bold;}
+.random p{  font-size: 25px;  margin: 20px;}
+.qqq{  font-size: 40px;  font-family: "Lora"; line-height: 1;}
+.random-quote button:hover{ background-color: #4169E1; color: white;}
+.random:hover + .qqq{color: #4169E1;}
+@keyframes appear{0%{opacity: 0;  }100%{opacity: 1; }}
+
+.random
+{
+  transition: 1s;  
+  position: absolute;
+  cursor: pointer;
+  width: 60%;
+  color: #222;
+  border: 2px solid #222;
+  border-radius: 20px 100px 20px 100px; 
+  left: 0; right:  0;
+  margin: 0 auto 55px auto;
+  padding: 20px 40px 20px 40px;
+  animation: appear 1s;
+}
+.random-quote 
+{
+  position: relative;
+  width: 100%;
+  height: inherit;
+  display: block;
+}
+.random-quote button
+{
+  position: relative;
+  padding: 20px 60px;
+  border: 2px solid #4169E1;
+  font-family: 'segoe UI';
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: auto;
+  border-radius: 10px; 
+  background-color: white;
+}
+
+
+
+/*mobile*/
+@media  screen and (max-width: 500px)
+{
+  body > h1 {font-size: 35px; overflow-x: hidden;}
+  .random {  width: 90%; padding: 5px; margin: 20px auto 20px auto; position: absolute;}
+  .random h3{  font-size: 23px;}
+  .random p{  font-size: 23px; margin:10px; }
+  .random-quote button{margin : 20px auto 50px auto; width: 90%;position: absolute;}
+  .random-quote button:focus{ background-color: white;   color: #222;}
+  .qqq {font-size: 25px;}
+  .quote-text{ text-align: center;}
+  .result-count{font-size: 25px;}
+  body >img
+  {
+    width: 40px;
+    height: 40px;
+  }
+  input[type='text']:focus
+  {
+    width: 90%;
+    border: 2px solid #4169E1;
+    overflow: hidden;
+    padding: 10px 20px;
+    height: 60px;
+  }
+}
